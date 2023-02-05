@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"  href="header.css">
+
+<title>Hotel Rooms</title>
+
+<style>
+
+  body {
+    background-color:#D6D7C8;
+    padding : 20px;
+  }
+  
+  
+  .card{
+   border-radius: 5px;
+   width: 350px;
+   box-shadow: 2px 4px 2px 4px rgba(0,0,0,0.2);
+   float: left;
+   margin-left: 40px;
+   background-color: #417771
+     
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 5px 5px 0 0 ;
+    height: 300px;
+  }
+  
+  .container {
+   padding: 10px;
+  }
+   
+
+  .card:hover {
+   box-shadow: 5px 5px 1px 1px rgba(0,0,0,0.2);
+  }
+
+   h1 {
+    background: linear-gradient(.25turn,#FFCDB2,#FFB4A2,#E5989B,#B5838D,#6D6875);
+   font-family: roboto, sans-serif;
+   color: #fff;
+   padding-left:20px;
+   text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+ }
+
+   
+   
+ 
+</style>
+
+</head>
+<body>
+<!-----logo and company name bar----->
+	<div class="logo01" >
+		<div class="logo02">
+
+			<img src="https://lh3.googleusercontent.com/KXjO_BUf_3q66MD30ZGaI2_dNgFze1A-DkUaR45_ROgrZeD5ZuTPHc1lCzugV9JFAxNvQTQWmALi5cxdOiS4Nz-886eCsLzXMRaH6gwJAfSZHxN_dREeULoq-eRV08EhRQ3AfXupO_itwXIr5A8Zz9SpWbu5q-S5gcHfdEkjqLVoDMjnHQ-r7myeMapxh5Um0k99Jxptto72oUseohd3cwEMRHO48XB9hNiPRkxjl53EdXL63aRRUztX1gtht2RMGeddKzHRmOAZP8j0uGgSvu79U6VG3eqUqJfg352vsL8UQH_26bx3Yh7CoUmxCDeYIMxAVhxWKJ0Trt7NItJo1sxLoVk3CGKjdxIxnzUGJFJrY4FmMeVXBzvVHDPuBe0tu8X6ZiAeNNuXnvJpkFK4HhXvslNV310bV18CALhak684-4_jmBcGBpchyQiuISLFM7Bxkn6v8zfRLJAz3ct_dHBg4Jy4JV8N5nih5t2iD7Ts41oKsodgQIJ0Mw47rWycYBq_z9Jk-fzkrNiOLyn4Rw7v_Z9Ho8Ea0MaTIliFSdTJ-DuWsqzr-cOdc2IPu-uLi1prRSWCOw67KO186BhtMi3lFXJ5rIkErabt7k-dOL1jnmmUNmLJvU9BIXTO1CPfMV1wLA9MFm0tn3MCX46bl_6sTZs6CcEWYH1c4uAlbk_Xo8HSKZK_jBGieU-INZMt5OqEGVhVO1etuJ__bAdVJdDMxDPv_vGP197qV9KOAgL1EAZ7lZnunp8bO2MQbTZTZ34dc3gVsFSK4DWQI-d4TS4n9KLgGJT0DT8l1NuhCm_AseU7zeyykbqlDRe9mWiVTtJ9_FqWuOaqQa3Il47TSk31IAh5nintN4hsGLUtvlqPLFkzfcxb99QL0C_WN-VjRua3R0Dp8JVm_18i8uuFthpflc_8kNq5Un8fbp6vPhhqdB0R=w953-h854-no?authuser=0">
+		</div>
+
+		<div class="logo03">
+		<h1>Happy Family Hotel & Resort</h1>
+		</div>
+
+		<div class="logo04">
+			<form class="search">
+			
+				<input type="text" >
+				<input   type="submit"  name="search"  value="search">
+				  
+			
+			</form>
+		</div>
+
+		<div class="logo05">
+		<a href="#footer">Contact <br>Us</a>
+		</div>
+
+	</div>
+<!-----End of logo and company name bar----->
+
+<!-----Menu Bar----->
+	
+	<div class="menu1" >
+		<div class="menu1-drop">
+		  <button class="dropbtn">Menu</button>
+		  <div class="dropdown-content">
+		    <a href="#">Accomodation</a>
+		    <a href="#">Food & Beverage</a>
+		    <a href="#">Wedding & Events</a>
+		    <a href="#">Tour Guide</a>
+		  </div>
+		</div>
+		<table width="100%">
+			<tr>
+				<td width="22%" style="background-color: darkgreen;">
+					<P style="text-align: left;color: yellow;padding-left: 3px;font-weight: bolder;text-align: justify;">Discover	Our Service</P>
+				</td>
+
+				<td width="5%" style="background-color: darkgreen;">
+					<img src="https://lh3.googleusercontent.com/t0wJMv3iX2etuBnwnfxXW52pdcCds3_8E9J2rgVha77Nn_IMu4h9Yiuci2m1WvyOYUB1R0WMRS4Xc4pC0uTIhmiyc9t3yLPs9PoTdr0IGVDRKYSp9qPm6L2lp-Di12l8Z0aUy2xNcGlbXE58hVIUf7RMgvyCPXtQwZCM2xDRFFTvF7aZIshKfYcma_UyepuS-YLVC_25e2vzI55rdOiU9ZsZRWQ3ys4fQ5IrukfAk40MewBy0_wdmO0rZ5MVXFl2nAwmEB_5h945g5OgtySzNaQG0V1KFq3TolvLZxJc0NK8B7MKrHB0kzSP6QtfWusuypmNdVjDyxsjp6mJTdWFUCL5gdS-0uObZU1IFoogMjMWR7WA60BYyViesVBSEuSVZFiSD5Wa614QGWBnOM6vkt6yvAUEuusL0UkC246RmrpcKyYlhCOkkAa3aff2g6Dehr5tUsNrUZZtmwZEaeD48VH6KHOzFRNzJ8RGlDSrqPfXgiamo_9IwxkgYfRojG599JVf_N15vOTxIEgRpcGCfV2JgXiZgShazbeJpwa9JoGJtoyffNF-qEGLTYxYmRT5DM1aD6zdnv1ij5NzpMaS4gWpQHKiqzx1064oP0NR1VfE71g0deF2Fl1tIJ-xioQJNv91IzFKBjxhPqUs5s4z-xaHf6mYYb0avL0JlLInWN8aK_6Lp95ZctKUpXkH6nqzVAWvzLmtQa-do-gzTHTANlLlKanwpSpQBlkXC5FAVolfJXPK9x9M9X35K_HzG2poAzA0WAQEDVdrBR7nHo8Y5_BDEo6HXR-Llodmab-Pnb6JLWm6MA07whS4TYZLQiUn-vgzvwMeUBQ-l_31ONJM6QXiEPXMpjs5cyyGq_YRCfQNtC8ekasalZmCMqVYgoXyLvHWolOmJ5nkcXJ72-JwArDr09jVq6nTHtZyHC6IZgsxbtfH=w470-h282-no?authuser=0" style="width:100%">
+				</td>
+
+				<td width="10%" style="background-color: darkgreen;">
+					<h1 style="color: yellow;">Home</h1>
+				</td>
+
+				<td width="13%" style="background-color: darkgreen;">
+					<h1 style="color: yellow;">Accomodation</h1>
+				</td>
+
+				<td width="17%" style="background-color: whitesmoke;">
+					<h1 style="color: darkblue;">Food & Beverage</h1>
+				</td>
+
+				<td width="18%" style="background-color: darkgreen;">
+					<h1 style="color: yellow;">Wedding & Events</h1>
+				</td>
+
+				<td width="15%" style="background-color: darkgreen;">
+					<h1 style="color: yellow;">Tour Guide</h1>
+				</td>
+			</tr>
+		</table>
+	</div>	
+
+<!-----End of Menu bar----->
+
+<!-- Card 1 -->
+
+<div class="card">
+
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155933803.jpg?k=722f6aafb9c65c0ad2ca4f919d813c0cc742d63052a471f9f824b50884022444&o="/>
+
+<div class="container"> 
+<h1> Superior King Room  </h1>
+<p> 
+    This King room has a spacious bathroom with glass enclosed, privileged access to the iconic infinity pool & rooftop garden.
+</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+</style>
+<table bgcolor="#F5F4A2">
+
+<tr> 
+<th scope=“col”>Sleeps</th>
+<th scope=“col”>Today's price </th>
+<th scope=“col”>Your choices</th>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥8,453</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥11,054</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥10,664</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥14,565</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>1 adults</td>
+<td>¥9,753</td>
+<td>Fabulous breakfast included</td>
+</tr>
+</table>
+</div> 
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+<div class="gallery">
+  <a target="_blank" href="https://pix10.agoda.net/hotelImages/5045241/-1/f3a6d838dab23ffd02272dbacb690599.jpg?ca=13&ce=1&s=1024x768">
+    <img src="https://pix10.agoda.net/hotelImages/5045241/-1/f3a6d838dab23ffd02272dbacb690599.jpg?ca=13&ce=1&s=1024x768" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166532126.jpg?k=5c9f6f85a1e7fbd7ba00e92c079be53948c08090cd70a8dc518952760e000601&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166532126.jpg?k=5c9f6f85a1e7fbd7ba00e92c079be53948c08090cd70a8dc518952760e000601&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://aff.bstatic.com/images/hotel/840x460/166/166571572.jpg">
+    <img src="https://aff.bstatic.com/images/hotel/840x460/166/166571572.jpg" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://ak-d.tripcdn.com/images/220m180000014u0i97DB2_R_960_960_R5_D.jpg">
+    <img src="https://ak-d.tripcdn.com/images/220m180000014u0i97DB2_R_960_960_R5_D.jpg" width="600" height="400">
+  </a>
+</div>
+
+
+</div>
+
+
+<!-- Card 2 --> 
+
+<div class="card">
+
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534621.jpg?k=021a9aafc597fdbc5b372da4845393382d36f55c1a80e4d0585df7bc333d332f&o="/>
+
+<div class="container"> 
+<h1> Superior Twin Room </h1>
+<p> 
+    This Twin room has spacious bathroom with glass enclosed, privileged access to the iconic infinity pool & rooftop garden.
+</p>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+</style>
+<table bgcolor="#F5F4A2">
+
+<tr> 
+<th scope=“col”>Sleeps</th>
+<th scope=“col”>Today's price </th>
+<th scope=“col”>Your choices</th>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥8,453</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥11,054</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥10,664</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥14,565</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>1 adults</td>
+<td>¥9,753</td>
+<td>Fabulous breakfast included</td>
+</tr>
+</table>
+</div> 
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534621.jpg?k=021a9aafc597fdbc5b372da4845393382d36f55c1a80e4d0585df7bc333d332f&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534621.jpg?k=021a9aafc597fdbc5b372da4845393382d36f55c1a80e4d0585df7bc333d332f&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534410.jpg?k=ec43e52a38d2ac67540da508fbb6ba126f0b63b5c04d36b43e6393b29290a00a&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534410.jpg?k=ec43e52a38d2ac67540da508fbb6ba126f0b63b5c04d36b43e6393b29290a00a&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534410.jpg?k=ec43e52a38d2ac67540da508fbb6ba126f0b63b5c04d36b43e6393b29290a00a&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166534410.jpg?k=ec43e52a38d2ac67540da508fbb6ba126f0b63b5c04d36b43e6393b29290a00a&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155933558.jpg?k=008877bfdeb7f7baadb35f4c1f7aaf60e3d8362f8c99a3a70cc7e88376b16514&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155933558.jpg?k=008877bfdeb7f7baadb35f4c1f7aaf60e3d8362f8c99a3a70cc7e88376b16514&o=" width="600" height="400">
+  </a>
+</div>
+</div>
+
+<!-- Card 3 -->
+
+
+<div class="card">
+
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155934499.jpg?k=1374f95cccf3ac7b89ce716bb38c724f47b56b5f1694f4629ecf204a4cb5c74b&o="/>
+
+<div class="container"> 
+<h1 class="header"> Deluxe King Room </h1>
+<p> This king room has a balcony, attached bathroom. Guests have privileged access to the infinity pool & rooftop garden.
+</p>
+<br>
+<br>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+
+</style>
+<table bgcolor="#F5F4A2">
+
+<tr> 
+<th scope=“col”>Sleeps</th>
+<th scope=“col”>Today's price </th>
+<th scope=“col”>Your choices</th>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥9,753</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>2 adults</td>
+<td>¥11,054</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥12,354</td>
+<td>Free cancellation<br><b>NO PREPAYMENT NEEDED </b>– pay at the property</td>
+</tr>
+<tr>
+<td>3 adults</td>
+<td>¥11,964</td>
+<td>Fabulous breakfast included</td>
+</tr>
+<tr>
+<td>1 adults</td>
+<td>¥15,865</td>
+<td>Fabulous breakfast included</td>
+</tr>
+</table>
+</div> 
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+</style>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166540382.jpg?k=1c7871997ab531023a8d8de01135a4d14978abe62724e33e17c8b6c8dde8146c&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166540382.jpg?k=1c7871997ab531023a8d8de01135a4d14978abe62724e33e17c8b6c8dde8146c&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155934501.jpg?k=136f39d58bbb3b3e7d8b1354b5fb7fd9103e1b99d79cb48da3268db4e8eb1636&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155934501.jpg?k=136f39d58bbb3b3e7d8b1354b5fb7fd9103e1b99d79cb48da3268db4e8eb1636&o="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155934504.jpg?k=fbade703fa42b70eeea8c4dc8f704b88b2c22863e6c7324b6c39a2816a762b35&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/155934504.jpg?k=fbade703fa42b70eeea8c4dc8f704b88b2c22863e6c7324b6c39a2816a762b35&o=" width="600" height="400">
+  </a>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166540379.jpg?k=01f44185f851f89104ce95b6de11323ed0a7e95cc338fb9c044b3080e8730589&o=">
+    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/166540379.jpg?k=01f44185f851f89104ce95b6de11323ed0a7e95cc338fb9c044b3080e8730589&o=" width="600" height="400">
+  </a>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
